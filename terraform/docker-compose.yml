@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+
+  bull-board:
+    # This image was publcily available on Docker Hub, we can also build it from the source code as well
+    image: nauverse/bull-board:latest 
+    container_name: bull-board 
+    ports:
+      - "3000:3000"
+    environment:
+      REDIS_URL: "redis://redis:6379"
+      BULL_VERSION: "BULLMQ"
+    depends_on:
+      - redis

@@ -10,14 +10,14 @@ managed by Terraform.
 - [Google Cloud SDK (`gcloud`)](https://cloud.google.com/sdk/docs/install) installed and authenticated.
 - A Google Cloud project with billing enabled.
 - SSH key pair for VM access.
-- Terraform 1.0+ installed.
+- Terraform installed.
 
 ---
 
 ## Folder Structure
 
 ```bash
-terraform-bull-board/
+terraform/
 ├── docker-compose.yml # Docker Compose file for running the service 
 ├── main.tf # Terraform main configuration
 ├── variables.tf # Terraform input variables

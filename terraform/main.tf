@@ -22,6 +22,8 @@ resource "google_compute_instance" "bull_board_vm" {
 
   tags = ["http-server"]
 
+  metadata_startup_script = file("startup.sh")
+
   provisioner "file" {
     source      = "docker-compose.yml"
     destination = "/tmp/docker-compose.yml"

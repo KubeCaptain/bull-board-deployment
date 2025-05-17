@@ -22,6 +22,7 @@ terraform/
 ├── main.tf # Terraform main configuration
 ├── variables.tf # Terraform input variables
 ├── outputs.tf # Terraform outputs
+├── startup.sh # It runs inside the VM at startup
 ```
 
 ## Setup Instructions
